@@ -1,0 +1,97 @@
+
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, user-scalable=no">
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <title>FD:FRS - Base64 Converter</title>
+    <meta property=og:title content="FD:FRS - Base64 Converter">
+    <meta name="description" content="A fast and simple tool to convert to and from base64">
+    <meta property=og:description content="A fast and simple tool to convert to and from base64">
+    <meta name="keywords" content="FD:FRS, FdFearless, Web Tools, Material Design"/> 
+    <!-- SEO -->
+    <meta content='FD:FRS' name='author'/>
+    <meta content='FDFEARLESS, Inc.' name='copyright'/>
+    <meta property="og:image" content="img/fdfrs.png"/>
+    <meta property=og:type content="website">
+    <meta property=og:url content="https://ampmaster.github.io/base64/">
+    <link rel="canonical" href="http://fdfrs.org/base64/">
+    <!-- Favicon -->
+    <link rel="manifest" href="manifest.json">
+    <meta http-equiv="cleartype" content="on">
+	<meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="apple-touch-icon" sizes="192x192" href="img/appicon192.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="img/appicon144.png">
+    <link rel="icon" type="image/png" href="img/favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png">
+    <meta name="msapplication-TileImage" content="img/favicon.png">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="msapplication-TileColor" content="#009688">
+	<meta name="theme-color" content="#009688">
+	<!-- Google+ -->
+    <link href='https://plus.google.com/+FuAdFearless/about' rel='author'/>
+    <link href='https://plus.google.com/+FuAdFearless/posts' rel='publisher'/>
+    <link href='https://plus.google.com/+FuAdFearless' rel='me'/>
+    <!-- Twitter -->
+    <meta content='summary_large_image' name='twitter:base-card'/>
+    <meta expr:content='FD:FRS' name='twitter:title'/>
+    <meta content='@FdFearless' name='twitter:site'/>
+    <meta content='@FD_FRS' name='twitter:creator'/>
+    <!-- CSS -->
+    <link href="app/style.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+  <div class="header">
+        Base64 Converter
+        <a class="topRight" href="http://fdfrs.org" target="_blank">FD:FRS</a>
+    </div>
+    <div class="io">
+        <div id="leftTile" class="tile">
+            <div class="type">
+                <div class="customSelect">
+                    <select id="leftTypeSelect">
+                        <option value="text" selected="true">Text</option>
+                        <option value="image">Image</option>
+                    </select>
+                    <span id="leftTypeText">Text</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="-100 -100 300 300">
+                        <path d="M0 0L100 0L50 80Z" />
+                    </svg>
+                </div>
+            </div>
+            <div id="leftContent" class="content">
+                <textarea id="leftTextarea" class="textarea" spellcheck="false">Hello world!</textarea>
+                <div id="leftImageArea" class="imagearea hidden">
+                    <div class="customUpload">
+                        <input id="leftImageInput" type="file" accept="image/*" title="">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path d="M9 16h6v-6h4l-7-7-7 7h4zm-4 2h14v2H5z" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="rightTile" class="tile">
+            <div class="type">
+                <div class="customSelect">
+                    <select id="rightTypeSelect">
+                        <option value="base64utf8" selected="true">Base64 (utf8)</option>
+                        <option value="base64ascii">Base64 (ascii)</option>
+                        <option value="base64image" disabled="true">Base64 (image)</option>
+                    </select>
+                    <span id="rightTypeText">Base64</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="-100 -100 300 300">
+                        <path d="M0 0L100 0L50 80Z" />
+                    </svg>
+                </div>
+            </div>
+            <div class="content">
+                <textarea id="rightTextarea" class="textarea" spellcheck="false">SGVsbG8gd29ybGQ=</textarea>
+            </div>
+        </div>
+    </div>
+<script src="app/base64.js" inline></script>
+<script src="app/index.js" inline></script>
+</html>
